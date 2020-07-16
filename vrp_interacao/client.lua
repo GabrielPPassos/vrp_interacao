@@ -6,7 +6,7 @@ Passos = Tunnel.getInterface("vrp_interacao")
 vRPmenu_ = {}
 Tunnel.bindInterface("vrp_interacao", vRPmenu_)
 Proxy.addInterface("vrp_interacao", vRPmenu_)
-
+-- Criado por [Discord: Passos#3717]
 --=============================================================================================--
 -- Executar Comando
 --=============================================================================================--
