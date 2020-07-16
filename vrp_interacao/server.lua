@@ -7,7 +7,7 @@ vRPmenu_ = {}
 Tunnel.bindInterface("vrp_interacao", vRPmenu_)
 Proxy.addInterface("vrp_interacao", vRPmenu_)
 vRPgarage = Tunnel.getInterface("vrp_adv_garages")
--- Criado por Passos
+-- Criado por [Discord: Passos#3717] 
 function vRPmenu_.menuInteracao()
     local source = source
     local user_id = vRP.getUserId(source)
