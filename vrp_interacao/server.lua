@@ -7,7 +7,8 @@ vRPmenu_ = {}
 Tunnel.bindInterface("vrp_interacao", vRPmenu_)
 Proxy.addInterface("vrp_interacao", vRPmenu_)
 vRPgarage = Tunnel.getInterface("vrp_adv_garages")
--- Criado por [Discord: Passos#3717] 
+
+-- Criado por [Discord: Passos#2514] 
 function vRPmenu_.menuInteracao()
     local source = source
     local user_id = vRP.getUserId(source)
@@ -27,8 +28,8 @@ function vRPmenu_.menuInteracao()
         principal["Admin"] = {function(source, choice)
             admin["Adicionar Grupo"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
-                local job = vRP.prompt(user_id, "Grupo: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
+                local job = vRP.prompt(source, "Grupo: ", "")
                 if id == "" and job == "" then
                     return 
                 end
@@ -38,7 +39,7 @@ function vRPmenu_.menuInteracao()
     
             admin["Adicionar na Whitelist"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
                 if id == "" then
                     return 
                 end
@@ -53,7 +54,7 @@ function vRPmenu_.menuInteracao()
     
             admin["Banir"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
                 if id == "" then
                     return 
                 end
@@ -63,8 +64,8 @@ function vRPmenu_.menuInteracao()
             
             admin["Dar Dinheiro"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
-                local quantia = vRP.prompt(user_id, "Quantidade: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
+                local quantia = vRP.prompt(source, "Quantidade: ", "")
                 if id == "" and quantia == "" then
                     return 
                 end
@@ -74,8 +75,8 @@ function vRPmenu_.menuInteracao()
     
             admin["Dar Veiculo"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
-                local veh = vRP.prompt(user_id, "Veiculo: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
+                local veh = vRP.prompt(source, "Veiculo: ", "")
                 if id == "" and veh == "" then
                     return 
                 end
@@ -91,7 +92,7 @@ function vRPmenu_.menuInteracao()
     
             admin["Desbanir"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
                 if id == "" then
                     return 
                 end
@@ -107,7 +108,7 @@ function vRPmenu_.menuInteracao()
     
             admin["Kickar"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
                 if id == "" then
                     return 
                 end
@@ -117,7 +118,7 @@ function vRPmenu_.menuInteracao()
     
             admin["Limpar Inventario"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
                 if id == "" then
                     return 
                 end
@@ -143,7 +144,7 @@ function vRPmenu_.menuInteracao()
     
             admin["Pegar Dinheiro"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local money = vRP.prompt(user_id, "Quantia: ", "")
+                local money = vRP.prompt(source, "Quantia: ", "")
                 if money == "" then
                     return 
                 end
@@ -158,8 +159,8 @@ function vRPmenu_.menuInteracao()
     
             admin["Pegar Item"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local item = vRP.prompt(user_id, "Item: ", "")
-                local qtd = vRP.prompt(user_id, "Quantidade: ", "")
+                local item = vRP.prompt(source, "Item: ", "")
+                local qtd = vRP.prompt(source, "Quantidade: ", "")
                 if item == "" and qtd == "" then
                     return 
                 end
@@ -169,7 +170,7 @@ function vRPmenu_.menuInteracao()
             
             admin["Remover da Whitelist"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
                 if id == "" then
                     return 
                 end
@@ -179,8 +180,8 @@ function vRPmenu_.menuInteracao()
             
             admin["Remover Grupo"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
-                local job = vRP.prompt(user_id, "Grupo: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
+                local job = vRP.prompt(source, "Grupo: ", "")
                 if id == "" and job == "" then
                     return 
                 end
@@ -190,8 +191,8 @@ function vRPmenu_.menuInteracao()
     
             admin["Remover Veiculo"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
-                local veh = vRP.prompt(user_id, "Veiculo: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
+                local veh = vRP.prompt(source, "Veiculo: ", "")
                 if id == "" and veh == "" then
                     return 
                 end
@@ -201,7 +202,7 @@ function vRPmenu_.menuInteracao()
     
             admin["Reviver Player"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
                 if id == "" then
                     return 
                 end
@@ -217,7 +218,7 @@ function vRPmenu_.menuInteracao()
     
             admin["Spawnar Veiculo"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "Veículo: ", "")
+                local id = vRP.prompt(source, "Veículo: ", "")
                 if id == "" then
                     return 
                 end
@@ -232,7 +233,7 @@ function vRPmenu_.menuInteracao()
     
             admin["TPTO"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
                 if id == "" then
                     return 
                 end
@@ -242,7 +243,7 @@ function vRPmenu_.menuInteracao()
     
             admin["TPTOME"] = {function(source, choice)
                 local user_id = vRP.getUserId(source)
-                local id = vRP.prompt(user_id, "ID: ", "")
+                local id = vRP.prompt(source, "ID: ", "")
                 if id == "" then
                     return 
                 end
@@ -291,7 +292,7 @@ function vRPmenu_.menuInteracao()
         pessoal["Enviar Dinheiro"] = {function(source, choice)
             local user_id = vRP.getUserId(source)
             local player = vRP.getUserSource(user_id)
-            local qtd = vRP.prompt(user_id, "Quantia de Dinheiro:", "")
+            local qtd = vRP.prompt(source, "Quantia de Dinheiro:", "")
             if qtd == "" then
                 return
             end
@@ -302,7 +303,7 @@ function vRPmenu_.menuInteracao()
         pessoal["Enviar Item"] = {function(source, choice)
             local user_id = vRP.getUserId(source)
             local player = vRP.getUserSource(user_id)
-            local item = vRP.prompt(user_id, "Item:", "")
+            local item = vRP.prompt(source, "Item:", "")
             if item == "" then
                 return
             end
@@ -314,7 +315,7 @@ function vRPmenu_.menuInteracao()
             vRP.closeMenu(source, pessoal)
             local user_id = vRP.getUserId(source)
             local player = vRP.getUserSource(user_id)
-            local anim = vRP.prompt(user_id, "Nome da Animação:", "")
+            local anim = vRP.prompt(source, "Nome da Animação:", "")
             if anim == "" then
                 return
             end
